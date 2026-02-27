@@ -1,7 +1,5 @@
 ## Backend
 
-- [  ] 3 modules
-- [  ]
 
 ### Backend system structure
 
@@ -9,7 +7,8 @@
 
 | Module  |  Controller |  Service(s) | Repository/ ORM  |
 |---|---|---|---|
-|training.module   |Workout.Controller, UserProgress.Controller, Exercise.Controller   |  Workout.service, UserProgress.service, Exercise.service | Workout, UserProgress, Exercise  |
+|training.module   |UserProgress.Controller, Exercise.Controller   | UserProgress.service, Exercise.service |UserProgress, Exercise  |
+| workout.module  | Workout.Controller  | Workout.service  |  Workout |   |
 |  user.module | user.Controller  |  user.service | User  |
 |   |   |   |   |   |
 
@@ -132,3 +131,21 @@ Submit a creation request for validation
 #### Output
 
 Returns the response to the action
+
+
+
+## Design Patterns
+
+## Composite
+The composite pattern will be used to structure our routes. Therefore, subroutes will be contained within subfolders in a structure similar to the api/frontend's routes. 
+
+## Singleton
+NestJs uses singleton by default in it's repository.
+
+
+## Decorator
+Decorator will be used to inject code within function and routes
+to greatly reduce code amount and increase code readability.
+
+
+

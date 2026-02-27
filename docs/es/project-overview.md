@@ -47,7 +47,7 @@ Usuarios que deseen alojar la aplicación.
 
 ## Casos de uso
 
-<img width="526" height="788" alt="livrable_use_case drawio" src="https://github.com/user-attachments/assets/9eaeb3dd-3473-4b00-815a-f287c2709ef4" />
+![Use case diagram](../Diagrams/ImageRenditions/livrable_use_case.png)
 
 ### Especificaciones de casos de uso:
 

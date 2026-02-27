@@ -10,7 +10,7 @@
   "buckets": {
     "markdown" : {
       "include": [
-        "*-[locale].md"
+        "[locale]/*.md"
       ]
     }
     

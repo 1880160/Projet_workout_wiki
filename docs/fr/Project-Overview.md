@@ -47,7 +47,7 @@ Les utilisateurs qui désirent héberger l'application.
 
 ## Les cas d’utilisation (use cases) ;
 
-<img width="526" height="788" alt="livrable_use_case drawio" src="https://github.com/user-attachments/assets/9eaeb3dd-3473-4b00-815a-f287c2709ef4" />
+![Use case diagram](../Diagrams/ImageRenditions/livrable_use_case.png)
 
 ### Spécifications des cas d'utilisation:
 

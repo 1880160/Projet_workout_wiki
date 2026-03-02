@@ -1,0 +1,1521 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://1880160.github.io/Projet_workout_wiki/fr/Project-Structure/">
+      
+      
+        <link rel="prev" href="../Project-Overview/">
+      
+      
+        <link rel="next" href="../design-patterns/">
+      
+      
+        
+          <link rel="alternate" href="/Projet_workout_wiki/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="fr">
+        
+          <link rel="alternate" href="/Projet_workout_wiki/es/" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Structure du projet - Workout Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#structure-du-projet" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../" title="Workout Project" class="md-header__button md-logo" aria-label="Workout Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Workout Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Structure du projet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/Projet_workout_wiki/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/Projet_workout_wiki/es/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Workout Project" class="md-nav__button md-logo" aria-label="Workout Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Workout Project
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Structure
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bienvenue !
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Project-Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aperçu du projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structure du projet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structure du projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-du-systeme-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure du système backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routes :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routes :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /Workout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrees_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putpatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Put/Patch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Put/Patch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrees_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#userprogress-mon-exercice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /UserProgress (Mon exercice)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/UserProgress (Mon exercice)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putpatch_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Put/Patch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Put/Patch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /Exercise
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/Exercise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../design-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modèles de conception qui seront utilisés
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../front-end-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Designs front-end
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Premiers pas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Backend
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-du-systeme-backend" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Structure du système backend
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routes :
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Routes :">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /Workout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrees_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putpatch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Put/Patch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Put/Patch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entrees_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrées
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#userprogress-mon-exercice" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /UserProgress (Mon exercice)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/UserProgress (Mon exercice)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#putpatch_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Put/Patch
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Put/Patch">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        /Exercise
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="/Exercise">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Get
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Post
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Post">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#entree_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Entrée
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sortie_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sortie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="structure-du-projet">Structure du projet</h1>
+<h2 id="backend">Backend</h2>
+<h3 id="structure-du-systeme-backend">Structure du système backend</h3>
+<p><img alt="texte alternatif" src="../../Diagrams/ImageRenditions/SystemDiagram.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Contrôleur</th>
+<th>Service(s)</th>
+<th>Repository/ ORM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>training.module</td>
+<td>UserProgress.Controller, Exercise.Controller</td>
+<td>UserProgress.service, Exercise.service</td>
+<td>UserProgress, Exercise</td>
+</tr>
+<tr>
+<td>workout.module</td>
+<td>Workout.Controller</td>
+<td>Workout.service</td>
+<td>Workout</td>
+</tr>
+<tr>
+<td>user.module</td>
+<td>user.Controller</td>
+<td>user.service</td>
+<td>User</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="routes">Routes :</h2>
+<table>
+<thead>
+<tr>
+<th>Méthode</th>
+<th>Route</th>
+<th>Entrée (Body/Query/Params)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GET</td>
+<td>/workout</td>
+<td><strong>Body</strong> : {nom de l'entraînement (nommé par l'utilisateur)}</td>
+<td>z</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/workout</td>
+<td><strong>Body</strong> : {liste des entraînements}</td>
+<td>z</td>
+</tr>
+<tr>
+<td>Inputs</td>
+<td>/workout</td>
+<td></td>
+<td>z</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/excerice</td>
+<td>nom de l'exercice, muscle ciblé, ,</td>
+<td>y</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/userprogress</td>
+<td>répétition/temps, série, poids</td>
+<td>y</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/user</td>
+<td>nom</td>
+<td>y</td>
+</tr>
+</tbody>
+</table>
+<h3 id="workout">/Workout</h3>
+<h3 id="get">Get</h3>
+<p>Retourne les « Workouts » associés à l'utilisateur</p>
+<h4 id="entrees">Entrées</h4>
+<ul>
+<li>jeton de connexion</li>
+</ul>
+<h4 id="sortie">Sortie</h4>
+<p>les entraînements associés à l'utilisateur</p>
+<h3 id="post">Post</h3>
+<p>Crée un nouvel entraînement associé à l'utilisateur</p>
+<h4 id="entrees_1">Entrées</h4>
+<ul>
+<li>l'utilisateur connecté</li>
+<li>l'objet User : (nom, mot de passe, etc.)</li>
+</ul>
+<h4 id="sortie_1">Sortie</h4>
+<p>Retourne la réponse à l'action</p>
+<h3 id="putpatch">Put/Patch</h3>
+<p>modifie un entraînement dont l'ID est x et qui est associé à l'utilisateur.</p>
+<h4 id="entrees_2">Entrées</h4>
+<ul>
+<li>l'utilisateur connecté</li>
+<li>l'ID de l'utilisateur à modifier</li>
+<li>les attributs à modifier</li>
+</ul>
+<h4 id="sortie_2">Sortie</h4>
+<p>Retourne la réponse à l'action</p>
+<h2 id="userprogress-mon-exercice">/UserProgress (Mon exercice)</h2>
+<h3 id="get_1">Get</h3>
+<p>Retourne le "UserProgress" associé à l'utilisateur</p>
+<h4 id="entree">Entrée</h4>
+<ul>
+<li>l'utilisateur connecté</li>
+</ul>
+<h4 id="sortie_3">Sortie</h4>
+<p>Liste des "UserProgress" associés à l'utilisateur</p>
+<h3 id="post_1">Post</h3>
+<p>Crée un nouveau "UserProgress" associé à l'utilisateur</p>
+<h4 id="entree_1">Entrée</h4>
+<ul>
+<li>L'utilisateur connecté</li>
+<li>L'objet "UserProgress" à créer</li>
+</ul>
+<h4 id="sortie_4">Sortie</h4>
+<p>Retourne la réponse à l'action</p>
+<h3 id="putpatch_1">Put/Patch</h3>
+<p>Modifie un "UserProgress" dont l'ID est associé à l'utilisateur.</p>
+<h4 id="entree_2">Entrée</h4>
+<ul>
+<li>L'utilisateur connecté</li>
+<li>L'ID UserProgress</li>
+<li>L'objet UserProgress à modifier</li>
+</ul>
+<h4 id="sortie_5">Sortie</h4>
+<p>Retourne la réponse à l'action</p>
+<h2 id="exercise">/Exercise</h2>
+<h3 id="get_2">Get</h3>
+<p>Retourne les exercices</p>
+<h4 id="entree_3">Entrée</h4>
+<ul>
+<li>(Optionnel) "Query" pour le filtrage</li>
+</ul>
+<h4 id="sortie_6">Sortie</h4>
+<p>Liste des exercices filtrés</p>
+<h3 id="post_2">Post</h3>
+<p>Soumettre une demande de création pour validation</p>
+<h4 id="entree_4">Entrée</h4>
+<ul>
+<li>ID de l'utilisateur créant l'exercice</li>
+<li>Objet de l'exercice à créer</li>
+</ul>
+<h4 id="sortie_7">Sortie</h4>
+<p>Retourne la réponse à l'action</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

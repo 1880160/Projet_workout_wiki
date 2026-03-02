@@ -1,3 +1,4 @@
+# Project Overview
 ## A clear description of the application
 
 The software allows you to create a server that manages user data for a training application. It enables synchronization of workouts across multiple user interfaces available on several platforms. This application will allow users to easily track their progress, know which exercise to do according to their needs and how to perform it correctly, and get inspired.

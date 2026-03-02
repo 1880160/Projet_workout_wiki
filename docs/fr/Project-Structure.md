@@ -1,108 +1,108 @@
+# Structure du projet
+
 ## Backend
 
-- [  ] 3 modules
-- [  ]
+### Structure du système backend
 
-### Structure de système backend
+![texte alternatif](./../Diagrams/ImageRenditions/SystemDiagram.png)
 
-![alt text](./../Diagrams/ImageRenditions/SystemDiagram.png)
-
-| Module  |  Controller |  Service(s) | Repository/ ORM  |
+| Module  |  Contrôleur |  Service(s) | Repository/ ORM  |
 |---|---|---|---|
-|training.module   |Workout.Controller, UserProgress.Controller, Exercise.Controller   |  Workout.service, UserProgress.service, Exercise.service | Workout, UserProgress, Exercise  |
+|training.module   |UserProgress.Controller, Exercise.Controller   | UserProgress.service, Exercise.service |UserProgress, Exercise  |
+| workout.module  | Workout.Controller  | Workout.service  |  Workout |   |
 |  user.module | user.Controller  |  user.service | User  |
 |   |   |   |   |   |
 
-## Routes:
+## Routes :
 
-|Methode|Route|Entre(Body/Query/Params)|Description|
+|Méthode|Route|Entrée (Body/Query/Params)|Description|
 |--|--|--|--|
-|GET|/workout| **Body**: {nom du workout(named by the user)}|z|
-|POST|/workout| **Body**: {list of training}|z|
+|GET|/workout| **Body** : {nom de l'entraînement (nommé par l'utilisateur)}|z|
+|POST|/workout| **Body** : {liste des entraînements}|z|
 |Inputs|/workout|  |z|
-|POST|/excerice|nom exercise, muscle sollicité, , |y|
-|POST|/userprogress|repetition/temps, série, poids|y|
+|POST|/excerice|nom de l'exercice, muscle ciblé, , |y|
+|POST|/userprogress|répétition/temps, série, poids|y|
 |POST|/user|nom|y|
 
 ### /Workout
 
 ### Get
 
-Retourne les «Workout» associés à l'utilisateur
+Retourne les « Workouts » associés à l'utilisateur
 
-#### Inputs
+#### Entrées
 
-- token de connexion
+- jeton de connexion
 
-#### Output
+#### Sortie
 
-les Workouts associer à l'utilisateur
+les entraînements associés à l'utilisateur
 
 ### Post
 
-Crée un nouveau Workout associer à l'utilisateur
+Crée un nouvel entraînement associé à l'utilisateur
 
-#### Inputs
+#### Entrées
 
-- l'utilisateur connectée
-- l'objet User : (Nom, Mot de passe et ect...)
+- l'utilisateur connecté
+- l'objet User : (nom, mot de passe, etc.)
 
-#### Output
+#### Sortie
 
 Retourne la réponse à l'action
 
 ### Put/Patch
 
-modifie un Workout dont l'ID est x et qui est associer à l'utilisateur.
+modifie un entraînement dont l'ID est x et qui est associé à l'utilisateur.
 
-#### Inputs
+#### Entrées
 
-- l'utilisateur connectée
-- l'Id de l'user à modifier
+- l'utilisateur connecté
+- l'ID de l'utilisateur à modifier
 - les attributs à modifier
 
-#### Output
+#### Sortie
 
 Retourne la réponse à l'action
 
-## /UserProgress (My Exercise)
+## /UserProgress (Mon exercice)
 
 ### Get
 
-Retourne les «UserProgress» associer à l'utilisateur
+Retourne le "UserProgress" associé à l'utilisateur
 
-#### Input
+#### Entrée
 
 - l'utilisateur connecté
 
-#### Output
+#### Sortie
 
-List des «UserProgres» associer à l'utilisateur
+Liste des "UserProgress" associés à l'utilisateur
 
 ### Post
 
-Crée un nouveau «UserProgress» associer à l'utilisateur
+Crée un nouveau "UserProgress" associé à l'utilisateur
 
-#### Input
+#### Entrée
 
 - L'utilisateur connecté
-- L'objet «UserProgress» à cree
+- L'objet "UserProgress" à créer
 
-#### Output
+#### Sortie
 
 Retourne la réponse à l'action
 
 ### Put/Patch
 
-Modifie un «UserProgress» dont le ID est associé à l'utilisateur.
+Modifie un "UserProgress" dont l'ID est associé à l'utilisateur.
 
-#### Input
+#### Entrée
 
 - L'utilisateur connecté
-- L'ID du UserProgress
+- L'ID UserProgress
 - L'objet UserProgress à modifier
 
-#### Output
+#### Sortie
 
 Retourne la réponse à l'action
 
@@ -110,38 +110,25 @@ Retourne la réponse à l'action
 
 ### Get
 
-Retourne les exercises
+Retourne les exercices
 
-#### Input
+#### Entrée
 
-- (Optional) «Query» pour le filtrage
+- (Optionnel) "Query" pour le filtrage
 
-#### Output
+#### Sortie
 
-List des exercises filtrers
+Liste des exercices filtrés
 
 ### Post
 
-Émets une requête de création pour validation
+Soumettre une demande de création pour validation
 
-#### Input
+#### Entrée
 
-- ID de l'utilisateur qui crée l'exercice
-- Objet de l'exercise à crée
+- ID de l'utilisateur créant l'exercice
+- Objet de l'exercice à créer
 
-#### Output
+#### Sortie
 
 Retourne la réponse à l'action
-
-## Composite
-
-Le pattern composite sera utilisé pour structurer nos routes. Par conséquent, les sous-routes seront contenues dans des sous-dossiers dans une structure similaire aux routes de l'api/frontend.
-
-## Singleton
-
-NestJs utilise le singleton par défaut dans son repository.
-
-## Decorator
-
-Le decorator sera utilisé pour injecter du code dans les fonctions et les routes
-afin de réduire considérablement la quantité de code et d'améliorer la lisibilité du code.

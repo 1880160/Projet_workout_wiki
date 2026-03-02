@@ -1,24 +1,26 @@
+# Descripción general del proyecto
+
 ## Una descripción clara de la aplicación
 
-El software te permite crear un servidor que gestiona los datos de usuario para una aplicación de entrenamiento. Permite la sincronización de entrenamientos a través de múltiples interfaces de usuario disponibles en varias plataformas. Esta aplicación permitirá a los usuarios hacer seguimiento fácilmente de su progreso, saber qué ejercicio hacer según sus necesidades y cómo realizarlo correctamente, y obtener inspiración.
+El software te permite crear un servidor que gestiona datos de usuario para una aplicación de entrenamiento. Permite la sincronización de entrenamientos a través de múltiples interfaces de usuario disponibles en varias plataformas. Esta aplicación permitirá a los usuarios realizar un seguimiento fácil de su progreso, saber qué ejercicio hacer según sus necesidades y cómo realizarlo correctamente, y obtener inspiración.
 
-## El planteamiento del problema y objetivos (marco)
+## El planteamiento del problema y los objetivos (marco)
 
-Esta aplicación resuelve el problema de sincronizar entrenamientos a través de múltiples plataformas en una interfaz de usuario diseñada para entrenamiento.
+Esta aplicación resuelve el problema de sincronizar entrenamientos a través de múltiples plataformas en una interfaz de usuario diseñada para el entrenamiento.
 
 El objetivo es crear una aplicación auto-alojada y de código abierto que sea simple, documentada y exclusivamente para entrenamientos.
 
-## Una visión general de las funcionalidades de la aplicación
+## Una descripción general de las características de la aplicación
 
 - Crear entrenamientos personalizados (el usuario podrá seleccionar ejercicios y luego crear entrenamientos que son listas de ejercicios)
-- Seguimiento de progreso (el usuario introducirá el número de repeticiones/tiempo, series y peso).
+- Seguimiento del progreso (el usuario ingresará el número de repeticiones/tiempo, series y peso).
 - Búsqueda de ejercicios con o sin filtros
 
 ## Descripción de usuarios y roles
 
 ### Desarrolladores
 
-Otros usuarios que deseen participar en mejorar la aplicación.
+Otros usuarios que deseen participar en la mejora de la aplicación.
 
 ### Usuarios
 
@@ -28,11 +30,11 @@ Usuarios que deseen alojar la aplicación.
 
 ### Funcionales
 
-- Base de datos: usuario, ejercicios, lista de ejercicios creados por usuario, entrenamiento.
+- Base de datos: usuario, ejercicios, lista de ejercicios creados por el usuario, entrenamiento.
 - API REST
 - Creación de una sesión de entrenamiento
 - Búsquedas de ejercicios
-- Seguimiento de progreso
+- Seguimiento del progreso
 - Validación administrativa
 
 ### No funcionales
@@ -47,7 +49,7 @@ Usuarios que deseen alojar la aplicación.
 
 ## Casos de uso
 
-![Use case diagram](../Diagrams/ImageRenditions/livrable_use_case.png)
+![Diagrama de casos de uso](../Diagrams/ImageRenditions/livrable_use_case.png)
 
 ### Especificaciones de casos de uso:
 
@@ -89,7 +91,7 @@ Usuarios que deseen alojar la aplicación.
 
 ## Planificación a través de la metodología de desarrollo
 
-La planificación se llevará a cabo semanalmente durante el período del curso, asegurando que se cumplan los objetivos. Además, la metodología de desarrollo será iterativa, permitiendo la reorganización del proyecto en caso de problemas.
+La planificación se realizará semanalmente durante el período del curso, asegurando que se cumplan los objetivos. Además, la metodología de desarrollo será iterativa, permitiendo la reorganización del proyecto en caso de problemas.
 El proyecto se dividirá en tres trimestres:
 - Desarrollo inicial de la API
 - Frontend

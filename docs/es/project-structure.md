@@ -1,15 +1,15 @@
-## Backend
+# Estructura del proyecto
 
-- [  ] 3 módulos
-- [  ]
+## Backend
 
 ### Estructura del sistema backend
 
-![alt text](./../Diagrams/ImageRenditions/SystemDiagram.png)
+![texto alternativo](./../Diagrams/ImageRenditions/SystemDiagram.png)
 
 | Módulo  |  Controlador |  Servicio(s) | Repositorio/ ORM  |
 |---|---|---|---|
-|training.module   |Workout.Controller, UserProgress.Controller, Exercise.Controller   |  Workout.service, UserProgress.service, Exercise.service | Workout, UserProgress, Exercise  |
+|training.module   |UserProgress.Controller, Exercise.Controller   | UserProgress.service, Exercise.service |UserProgress, Exercise  |
+| workout.module  | Workout.Controller  | Workout.service  |  Workout |   |
 |  user.module | user.Controller  |  user.service | User  |
 |   |   |   |   |   |
 
@@ -17,18 +17,18 @@
 
 |Método|Ruta|Entrada(Body/Query/Params)|Descripción|
 |--|--|--|--|
-|GET|/workout| **Body**: {workout name(named by the user)}|z|
-|POST|/workout| **Body**: {list of training}|z|
+|GET|/workout| **Body**: {nombre del entrenamiento (nombrado por el usuario)}|z|
+|POST|/workout| **Body**: {lista de entrenamientos}|z|
 |Inputs|/workout|  |z|
-|POST|/excerice|exercise name, targeted muscle, , |y|
-|POST|/userprogress|repetition/time, set, weight|y|
-|POST|/user|name|y|
+|POST|/excerice|nombre del ejercicio, músculo objetivo, , |y|
+|POST|/userprogress|repetición/tiempo, serie, peso|y|
+|POST|/user|nombre|y|
 
 ### /Workout
 
 ### Get
 
-Devuelve los "entrenamientos" asociados con el usuario
+Devuelve los "Entrenamientos" asociados con el usuario
 
 #### Entradas
 
@@ -69,24 +69,24 @@ Devuelve la respuesta a la acción
 
 ### Get
 
-Devuelve el "progreso del usuario" asociado con el usuario
+Devuelve el "UserProgress" asociado con el usuario
 
 #### Input
 
-- el usuario con sesión iniciada
+- el usuario autenticado
 
 #### Output
 
-Lista de "progreso del usuario" asociado con el usuario
+Lista de "UserProgress" asociados con el usuario
 
 ### Post
 
-Crea un nuevo "progreso del usuario" asociado con el usuario
+Crea un nuevo "UserProgress" asociado con el usuario
 
 #### Input
 
-- El usuario con sesión iniciada
-- El objeto "progreso del usuario" a crear
+- El usuario autenticado
+- El objeto "UserProgress" a crear
 
 #### Output
 
@@ -94,13 +94,13 @@ Devuelve la respuesta a la acción
 
 ### Put/Patch
 
-Modifica un "progreso del usuario" cuyo ID está asociado con el usuario.
+Modifica un "UserProgress" cuyo ID está asociado con el usuario.
 
 #### Input
 
-- El usuario con sesión iniciada
-- El ID del progreso del usuario
-- El objeto de progreso del usuario a modificar
+- El usuario autenticado
+- El ID de UserProgress
+- El objeto UserProgress a modificar
 
 #### Output
 
@@ -122,7 +122,7 @@ Lista de ejercicios filtrados
 
 ### Post
 
-Envía una solicitud de creación para validación
+Enviar una solicitud de creación para validación
 
 #### Entrada
 
@@ -132,16 +132,3 @@ Envía una solicitud de creación para validación
 #### Salida
 
 Devuelve la respuesta a la acción
-
-## Composite
-
-El patrón composite se utilizará para estructurar nuestras rutas. Por lo tanto, las subrutas estarán contenidas dentro de subcarpetas en una estructura similar a las rutas del api/frontend.
-
-## Singleton
-
-NestJs utiliza singleton por defecto en su repositorio.
-
-## Decorator
-
-Decorator se utilizará para inyectar código dentro de funciones y rutas
-para reducir considerablemente la cantidad de código y aumentar la legibilidad del código.

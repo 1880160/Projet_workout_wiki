@@ -1,1 +1,3 @@
-Bienvenue sur le wiki Projet_workout !
+# Premiers pas
+
+Bienvenue sur le wiki de Projet_workout !

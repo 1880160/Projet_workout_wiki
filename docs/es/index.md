@@ -1,1 +1,3 @@
-Proyecto desarrollado por Guerre450 y 1880160
+# ¡Bienvenido!
+
+Proyecto desarrollado por Guerre450 & 1880160

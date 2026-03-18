@@ -1,0 +1,166 @@
+<mxfile host="65bd71144e">
+    <diagram id="EZryLc0vK13Qfgcs-D9h" name="Page-1">
+        <mxGraphModel dx="1359" dy="448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Authentification page(sign up)" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-230" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="login()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="2" vertex="1">
+                    <mxGeometry y="140" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="signup()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="2" vertex="1">
+                    <mxGeometry y="170" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="String : username" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="2" vertex="1">
+                    <mxGeometry x="10" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="String : email" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="2" vertex="1">
+                    <mxGeometry x="-10" y="40" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="String : password" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="2" vertex="1">
+                    <mxGeometry y="60" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="String : confirm_password" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="2" vertex="1">
+                    <mxGeometry x="-10" y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="75" value="register()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="2" vertex="1">
+                    <mxGeometry x="-5" y="110" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Header" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="15" width="240" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="redirection _homepage()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
+                    <mxGeometry y="170" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="logout()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
+                    <mxGeometry y="145" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="redirection_training_session_page()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
+                    <mxGeometry y="120" width="210" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="redirection_exercise_list_page()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
+                    <mxGeometry y="100" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="redirection_setting_page()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
+                    <mxGeometry y="80" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="String user" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
+                    <mxGeometry y="18" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Homepage" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="510" y="15" width="200" height="250" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="String username" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
+                    <mxGeometry x="-10" y="20" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="String training objectif" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
+                    <mxGeometry x="-10" y="48" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="String progress training" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
+                    <mxGeometry x="-10" y="78" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="Suggestion()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
+                    <mxGeometry x="-10" y="170" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="int total_workout_done" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="11" vertex="1">
+                    <mxGeometry y="108" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="int total_workout_done_this_Week" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="11" vertex="1">
+                    <mxGeometry y="138" width="190" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="Create_Workout()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
+                    <mxGeometry x="-10" y="200" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="Workout pasge" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="240" y="260" width="200" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Setting page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="280" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="change_language()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
+                    <mxGeometry x="-10" y="170" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="darkMode()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
+                    <mxGeometry x="-10" y="140" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="deleteUser()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
+                    <mxGeometry x="-10" y="110" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="reset_data_user()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
+                    <mxGeometry x="-10" y="80" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Exercise list page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry y="260" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="String search bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="16" vertex="1">
+                    <mxGeometry y="28" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="add_exercise _list()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="16" vertex="1">
+                    <mxGeometry x="-10" y="58" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="74" value="? categorie" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAlign=left;" parent="16" vertex="1">
+                    <mxGeometry y="88" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="? target muscle" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAlign=left;" parent="16" vertex="1">
+                    <mxGeometry x="-10" y="118" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Training session page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" width="200" height="230" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="int repetition" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAlign=left;" parent="17" vertex="1">
+                    <mxGeometry x="-10" y="42" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="int set" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAlign=left;" parent="17" vertex="1">
+                    <mxGeometry x="-10" y="72" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="date time" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAlign=left;" parent="17" vertex="1">
+                    <mxGeometry y="20" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="play/pause()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="17" vertex="1">
+                    <mxGeometry x="-5" y="200" width="90" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="stop()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="17" vertex="1">
+                    <mxGeometry x="-5" y="170" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="list&amp;lt;exercise&amp;gt; exercise_list" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="17" vertex="1">
+                    <mxGeometry x="-10" y="102" width="170" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="Authentification page(sign in)" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="10" width="200" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="login()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="60" vertex="1">
+                    <mxGeometry y="140" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="signup()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="60" vertex="1">
+                    <mxGeometry y="170" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="String : username" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="60" vertex="1">
+                    <mxGeometry x="10" y="20" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="64" value="String password" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="60" vertex="1">
+                    <mxGeometry y="50" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="creating training page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-240" y="257.5" width="200" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="String name training" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="69" vertex="1">
+                    <mxGeometry y="22.5" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="String day of the week" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="69" vertex="1">
+                    <mxGeometry y="52.5" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="? progress" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="69">
+                    <mxGeometry y="112.5" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="String Note" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="69">
+                    <mxGeometry x="10" y="82.5" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="confirm()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="5" y="118" width="70" height="30" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

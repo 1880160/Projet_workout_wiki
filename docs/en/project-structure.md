@@ -8,7 +8,7 @@
 
 | Module  |  Controller |  Service(s) | Repository/ ORM  |
 |---|---|---|---|
-|training.module   |UserProgress.Controller, Exercise.Controller   | UserProgress.service, Exercise.service |UserProgress, Exercise  |
+|training.module   |UserExercise.Controller, Exercise.Controller   | UserExercise.service, Exercise.service |UserExercise, Exercise  |
 | workout.module  | Workout.Controller  | Workout.service  |  Workout |   |
 |  user.module | user.Controller  |  user.service | User  |
 |   |   |   |   |   |
@@ -21,7 +21,7 @@
 |POST|/workout| **Body**: {list of training}|z|
 |Inputs|/workout|  |z|
 |POST|/excerice|exercise name, targeted muscle, , |y|
-|POST|/userprogress|repetition/time, set, weight|y|
+|POST|/UserExercise|repetition/time, set, weight|y|
 |POST|/user|name|y|
 
 ### /Workout
@@ -65,11 +65,11 @@ modifies a workout whose ID is x and which is associated with the user.
 
 Returns the response to the action
 
-## /UserProgress (My Exercise)
+## /UserExercise (My Exercise)
 
 ### Get
 
-Returns the "UserProgress" associated with the user
+Returns the "UserExercise" associated with the user
 
 #### Input
 
@@ -77,16 +77,16 @@ Returns the "UserProgress" associated with the user
 
 #### Output
 
-List of "UserProgress" associated with the user
+List of "UserExercise" associated with the user
 
 ### Post
 
-Creates a new "UserProgress" associated with the user
+Creates a new "UserExercise" associated with the user
 
 #### Input
 
 - The logged-in user
-- The "UserProgress" object to create
+- The "UserExercise" object to create
 
 #### Output
 
@@ -94,13 +94,13 @@ Returns the response to the action
 
 ### Put/Patch
 
-Modifies a "UserProgress" whose ID is associated with the user.
+Modifies a "UserExercise" whose ID is associated with the user.
 
 #### Input
 
 - The logged-in user
-- The UserProgress ID
-- The UserProgress object to modify
+- The UserExercise ID
+- The UserExercise object to modify
 
 #### Output
 

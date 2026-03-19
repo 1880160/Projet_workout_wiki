@@ -1,4 +1,10 @@
 # Project Structure
+## Frontend
+
+![alt text](../Diagrams/ImageRenditions/frontend_diagram_class.png)
+
+
+
 ## Backend
 
 

@@ -1,11 +1,11 @@
 <mxfile host="65bd71144e">
     <diagram id="EZryLc0vK13Qfgcs-D9h" name="Page-1">
-        <mxGraphModel dx="1359" dy="448" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1722" dy="649" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
                 <mxCell id="2" value="Authentification page(sign up)" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-230" width="200" height="200" as="geometry"/>
+                    <mxGeometry x="-330" y="10" width="200" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="5" value="login()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="2" vertex="1">
                     <mxGeometry y="140" width="60" height="30" as="geometry"/>
@@ -28,32 +28,48 @@
                 <mxCell id="75" value="register()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="2" vertex="1">
                     <mxGeometry x="-5" y="110" width="70" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="109" style="edgeStyle=none;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" edge="1" parent="1" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="540" y="550" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="111" style="edgeStyle=none;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="86">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" style="edgeStyle=none;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="15">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" style="edgeStyle=none;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="8" target="13">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" style="edgeStyle=none;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="170" y="640" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
                 <mxCell id="8" value="Header" style="swimlane;whiteSpace=wrap;html=1;startSize=23;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="15" width="240" height="200" as="geometry"/>
+                    <mxGeometry x="220" y="520" width="240" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="18" value="redirection _homepage()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
-                    <mxGeometry y="170" width="150" height="30" as="geometry"/>
+                    <mxGeometry y="130" width="150" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="19" value="logout()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
-                    <mxGeometry y="145" width="60" height="30" as="geometry"/>
+                    <mxGeometry y="105" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="23" value="redirection_training_session_page()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
-                    <mxGeometry y="120" width="210" height="30" as="geometry"/>
+                <mxCell id="23" value="redirection_My_Workout_page()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
+                    <mxGeometry x="10" y="80" width="190" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="26" value="redirection_exercise_list_page()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
-                    <mxGeometry y="100" width="190" height="30" as="geometry"/>
+                <mxCell id="26" value="redirection_exercises_page()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
+                    <mxGeometry x="5" y="60" width="180" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="redirection_setting_page()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
-                    <mxGeometry y="80" width="160" height="30" as="geometry"/>
+                    <mxGeometry y="40" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="78" value="String user" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="8" vertex="1">
                     <mxGeometry y="18" width="80" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="11" value="Homepage" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="510" y="15" width="200" height="250" as="geometry"/>
-                </mxCell>
-                <mxCell id="32" value="String username" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
-                    <mxGeometry x="-10" y="20" width="110" height="30" as="geometry"/>
+                    <mxGeometry x="540" y="520" width="200" height="230" as="geometry"/>
                 </mxCell>
                 <mxCell id="51" value="String training objectif" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
                     <mxGeometry x="-10" y="48" width="140" height="30" as="geometry"/>
@@ -61,23 +77,46 @@
                 <mxCell id="53" value="String progress training" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
                     <mxGeometry x="-10" y="78" width="150" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="55" value="Suggestion()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
-                    <mxGeometry x="-10" y="170" width="90" height="30" as="geometry"/>
-                </mxCell>
                 <mxCell id="56" value="int total_workout_done" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="11" vertex="1">
                     <mxGeometry y="108" width="130" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="58" value="int total_workout_done_this_Week" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="11" vertex="1">
                     <mxGeometry y="138" width="190" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="59" value="Create_Workout()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
-                    <mxGeometry x="-10" y="200" width="120" height="30" as="geometry"/>
+                <mxCell id="124" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="11" source="59">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-130" y="290" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="60" y="220"/>
+                            <mxPoint x="-129" y="220"/>
+                            <mxPoint x="-129" y="290"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
-                <mxCell id="13" value="Workout pasge" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="240" y="260" width="200" height="205" as="geometry"/>
+                <mxCell id="59" value="Create_Workout()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="11" vertex="1">
+                    <mxGeometry y="168" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="My Workouts page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="230" y="255" width="240" height="205" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="&amp;nbsp;list&amp;lt; list&amp;lt;workout&amp;gt; &amp;gt; day_of_the_week" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="13">
+                    <mxGeometry x="-15" y="28" width="230" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" style="edgeStyle=orthogonalEdgeStyle;html=1;" edge="1" parent="13" source="85">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="310" y="275" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="55" y="255"/>
+                            <mxPoint x="311" y="255"/>
+                            <mxPoint x="311" y="275"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="85" value="create_workout()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="13">
+                    <mxGeometry y="170" width="110" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="15" value="Setting page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="490" y="280" width="200" height="200" as="geometry"/>
+                    <mxGeometry x="500" y="300" width="200" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="change_language()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
                     <mxGeometry x="-10" y="170" width="130" height="30" as="geometry"/>
@@ -91,23 +130,26 @@
                 <mxCell id="35" value="reset_data_user()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="15" vertex="1">
                     <mxGeometry x="-10" y="80" width="120" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="16" value="Exercise list page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry y="260" width="200" height="200" as="geometry"/>
+                <mxCell id="16" value="Exercise library page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="-90" y="520" width="260" height="200" as="geometry"/>
                 </mxCell>
                 <mxCell id="37" value="String search bar" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="16" vertex="1">
                     <mxGeometry y="28" width="110" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="38" value="add_exercise _list()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="16" vertex="1">
-                    <mxGeometry x="-10" y="58" width="130" height="30" as="geometry"/>
+                <mxCell id="93" value="enum category" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="16">
+                    <mxGeometry x="5" y="50" width="100" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" value="? categorie" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAlign=left;" parent="16" vertex="1">
-                    <mxGeometry y="88" width="80" height="30" as="geometry"/>
+                <mxCell id="94" value="enum muscle group" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="16">
+                    <mxGeometry y="70" width="130" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="45" value="? target muscle" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAlign=left;" parent="16" vertex="1">
-                    <mxGeometry x="-10" y="118" width="110" height="30" as="geometry"/>
+                <mxCell id="95" value="addExercise()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="16">
+                    <mxGeometry x="15" y="100" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="list&amp;lt;exercises&amp;gt; showing_example_of_exercise" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="16">
+                    <mxGeometry y="130" width="270" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="17" value="Training session page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="730" width="200" height="230" as="geometry"/>
+                    <mxGeometry x="460" y="800" width="200" height="230" as="geometry"/>
                 </mxCell>
                 <mxCell id="41" value="int repetition" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;imageAlign=left;" parent="17" vertex="1">
                     <mxGeometry x="-10" y="42" width="90" height="30" as="geometry"/>
@@ -127,14 +169,17 @@
                 <mxCell id="79" value="list&amp;lt;exercise&amp;gt; exercise_list" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="17" vertex="1">
                     <mxGeometry x="-10" y="102" width="170" height="30" as="geometry"/>
                 </mxCell>
+                <mxCell id="116" style="edgeStyle=none;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="60" target="2">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="60" value="Authentification page(sign in)" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="10" width="200" height="210" as="geometry"/>
+                    <mxGeometry x="-100" y="10" width="200" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="61" value="login()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="60" vertex="1">
                     <mxGeometry y="140" width="60" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="62" value="signup()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="60" vertex="1">
-                    <mxGeometry y="170" width="70" height="30" as="geometry"/>
+                    <mxGeometry x="10" y="170" width="70" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="63" value="String : username" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="60" vertex="1">
                     <mxGeometry x="10" y="20" width="100" height="30" as="geometry"/>
@@ -142,23 +187,94 @@
                 <mxCell id="64" value="String password" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="60" vertex="1">
                     <mxGeometry y="50" width="110" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="69" value="creating training page" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-240" y="257.5" width="200" height="205" as="geometry"/>
+                <mxCell id="77" value="confirm()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="60" vertex="1">
+                    <mxGeometry y="110" width="70" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="70" value="String name training" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="69" vertex="1">
-                    <mxGeometry y="22.5" width="130" height="30" as="geometry"/>
+                <mxCell id="86" value="Create workout page" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="812.5" width="200" height="205" as="geometry"/>
                 </mxCell>
-                <mxCell id="71" value="String day of the week" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="69" vertex="1">
-                    <mxGeometry y="52.5" width="140" height="30" as="geometry"/>
+                <mxCell id="87" value="String workout_name&lt;span style=&quot;font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Workout%20pasge%22%20style%3D%22swimlane%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22240%22%20y%3D%22250%22%20width%3D%22200%22%20height%3D%22205%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%26amp%3Bnbsp%3Blist%26amp%3Blt%3Btraining%26amp%3Bgt%3B%20training%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3Bautosize%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22-5%22%20y%3D%2228%22%20width%3D%22140%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22create%20training()%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3Bautosize%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20y%3D%22170%22%20width%3D%22110%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="86">
+                    <mxGeometry x="-5" y="28" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="82" value="? progress" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="69">
-                    <mxGeometry y="112.5" width="80" height="30" as="geometry"/>
+                <mxCell id="88" value="back()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="86">
+                    <mxGeometry y="137.5" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="80" value="String Note" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="69">
-                    <mxGeometry x="10" y="82.5" width="80" height="30" as="geometry"/>
+                <mxCell id="89" value="String day_of_the_week&lt;span style=&quot;font-family: monospace; font-size: 0px; text-align: start;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22Workout%20pasge%22%20style%3D%22swimlane%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22240%22%20y%3D%22250%22%20width%3D%22200%22%20height%3D%22205%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%223%22%20value%3D%22%26amp%3Bnbsp%3Blist%26amp%3Blt%3Btraining%26amp%3Bgt%3B%20training%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3Bautosize%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20x%3D%22-5%22%20y%3D%2228%22%20width%3D%22140%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3CmxCell%20id%3D%224%22%20value%3D%22create%20training()%22%20style%3D%22text%3Bhtml%3D1%3Balign%3Dcenter%3BverticalAlign%3Dmiddle%3Bresizable%3D0%3Bpoints%3D%5B%5D%3Bautosize%3D1%3BstrokeColor%3Dnone%3BfillColor%3Dnone%3B%22%20vertex%3D%221%22%20parent%3D%222%22%3E%3CmxGeometry%20y%3D%22170%22%20width%3D%22110%22%20height%3D%2230%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGr&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="86">
+                    <mxGeometry y="47.5" width="150" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="77" value="confirm()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="5" y="118" width="70" height="30" as="geometry"/>
+                <mxCell id="90" value="date date" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="86">
+                    <mxGeometry y="67.5" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="Exercices Exercice" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="86">
+                    <mxGeometry x="5" y="87.5" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="String Note" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="86">
+                    <mxGeometry x="5" y="107.5" width="80" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="Add exercise page" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-60" y="280" width="200" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="String exercise_name" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="96">
+                    <mxGeometry x="5" y="28" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="enum category" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="96">
+                    <mxGeometry x="5" y="45" width="100" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="enum muscle group" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="96">
+                    <mxGeometry y="65" width="130" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="submitExercise()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="96">
+                    <mxGeometry y="140" width="110" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="String equipement" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="96">
+                    <mxGeometry x="5" y="85" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="String Description" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="96">
+                    <mxGeometry x="5" y="110" width="120" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="cancel()" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="96">
+                    <mxGeometry x="5" y="160" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="110" style="edgeStyle=none;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.128;entryY=0.022;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="8" target="17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" style="edgeStyle=none;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=-0.021;entryY=0.371;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="2" target="61">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.05;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="95" target="96">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="-120" y="635"/>
+                            <mxPoint x="-120" y="290"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="120" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.002;entryY=0.055;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="27" target="15">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="490" y="575"/>
+                            <mxPoint x="490" y="311"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="121" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=1.005;entryY=0.063;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="26" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=-0.001;entryY=0.086;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="23" target="13">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="210" y="615"/>
+                            <mxPoint x="210" y="273"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="123" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.019;entryY=0.048;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="18" target="11">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="510" y="665"/>
+                            <mxPoint x="510" y="531"/>
+                        </Array>
+                    </mxGeometry>
                 </mxCell>
             </root>
         </mxGraphModel>

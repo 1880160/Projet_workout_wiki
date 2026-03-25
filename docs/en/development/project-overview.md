@@ -48,7 +48,7 @@ Users who wish to host the application.
 
 ## Use cases
 
-![Use case diagram](../Diagrams/ImageRenditions/livrable_use_case.png)
+![Use case diagram](../Diagrams/ImageRenditions/livrable-use-case.png)
 
 ### Use case specifications:
 

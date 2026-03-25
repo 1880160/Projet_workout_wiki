@@ -1,5 +1,3 @@
-¡Bienvenido a la wiki de Projet_workout!
-
-¡Bienvenido a la wiki de Projet_workout!
+# Primeros Pasos
 
 ¡Bienvenido a la wiki de Projet_workout!

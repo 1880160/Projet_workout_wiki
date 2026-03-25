@@ -3,6 +3,8 @@ site_url: https://1880160.github.io/Projet_workout_wiki
 
 theme:
   name: material
+extra_css:
+  - stylesheets/extra.css
 plugins:
   - i18n:
       docs_structure: folder
@@ -17,3 +19,6 @@ plugins:
         - locale: es
           name: Español
           build: true
+  - search:
+      enabled: true
+

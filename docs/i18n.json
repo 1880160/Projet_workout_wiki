@@ -11,7 +11,7 @@
     "markdown" : {
       "include": [
         "[locale]/*.md",
-        "[locale]/development*.md",
+        "[locale]/development/*.md",
         "[locale]/development/backend/*.md",
         "[locale]/development/architecture/*.md",
         "[locale]/development/frontend/*.md"

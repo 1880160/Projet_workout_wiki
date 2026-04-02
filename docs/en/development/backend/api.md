@@ -1,6 +1,6 @@
 | Module  |  Controller |  Service(s) | Repository/ ORM  |
 |---|---|---|---|
-|training.module   |UserExercise.Controller, Exercise.Controller   | UserExercise.service, Exercise.service |UserExercise, Exercise  |
+|exercise.module   |UserExercise.Controller, Exercise.Controller   | UserExercise.service, Exercise.service |UserExercise, Exercise  |
 | workout.module  | Workout.Controller  | Workout.service  |  Workout |   |
 |  user.module | user.Controller  |  user.service | User  |
 |   |   |   |   |   |

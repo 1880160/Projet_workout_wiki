@@ -43,7 +43,7 @@ Users who wish to host the application.
 
 ## Application constraints
 
-- Backend: Next.js
+- Backend: Nestjs
 - Frontend: Angular
 
 ## Use cases

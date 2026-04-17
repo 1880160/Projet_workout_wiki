@@ -2,8 +2,10 @@
 ## Modules:
 | Module  |  Controller |  Service(s) | Repository/ ORM  |
 |---|---|---|---|
-|exercise.module   |UserExercise.Controller, Exercise.Controller   | UserExercise.service, Exercise.service |UserExercise, Exercise  |
-| workout.module  | Workout.Controller  | Workout.service  |  Workout |   |
+|exercise.module   | exercise.Controller   |  exercise.service | Exercise
+|exercise-request.module   | exercise-request.Controller   |  exercise-request.service |  ExerciseRequest  |
+|user-exercise.module   |user-exercise.Controller   | user-exercise.service | UserExercise  |
+| workout.module  | workout.Controller  | workout.service  |  Workout |   |
 |  user.module | user.Controller  |  user.service | User  |
 |   |   |   |   |   |
 

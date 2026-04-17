@@ -3,8 +3,14 @@ site_url: https://1880160.github.io/Projet_workout_wiki
 
 theme:
   name: material
+markdown_extensions:
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/mkdocsoad.css
 plugins:
   - i18n:
       docs_structure: folder
@@ -21,4 +27,5 @@ plugins:
           build: true
   - search:
       enabled: true
-
+  - neoteroi.mkdocsoad:
+      use_pymdownx: true

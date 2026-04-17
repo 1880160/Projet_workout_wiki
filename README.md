@@ -1,6 +1,12 @@
 # Projet Workout's Wiki
 ## Testing: 
-```
+```bash
+#Create env
+python -m venv python-env
+#Update envenronnment
+pip install -r ./requirements
+
+#start serving a static page:
 mkdocs serve
 ```
 ## Using auto translation from en to any language

@@ -9,6 +9,10 @@ pip install -r ./requirements
 #start serving a static page:
 mkdocs serve
 ```
+
+## About adding a new plugin:
+if you add a new plugin please add it to the github workflow
+
 ## Using auto translation from en to any language
 1. create a .env file in the docs folder
 2. put your lingo.dev api key inside

@@ -20,7 +20,7 @@
 
 ![Workout creation](./../../../Front-End-Designs-Images/WorkoutCreate.svg)
 
-3# Exercise page:
+# Exercise page:
 
 ![Exercise](./../../../Front-End-Designs-Images/Exercise.svg)
 
@@ -28,6 +28,11 @@
 
 ![Exercise creation](./../../../Front-End-Designs-Images/ExerciseCreate.svg)
 
+# Exercise Review (Admin Only)
+## Empty
+![Exercise Review Empty](../../../Front-End-Designs-Images/ExerciseReview.svg)
+## one
+![Exercise Review One](../../../Front-End-Designs-Images/ExerciseReview1.svg)
 ## My exercises page:
 
 ![My exercises page](./../../../Front-End-Designs-Images/MyExercise.svg)

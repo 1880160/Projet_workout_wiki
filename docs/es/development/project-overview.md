@@ -1,16 +1,16 @@
-# Descripción General del Proyecto
+# Descripción general del proyecto
 
 ## Una descripción clara de la aplicación
 
-El software te permite crear un servidor que gestiona datos de usuario para una aplicación de entrenamiento. Permite la sincronización de entrenamientos en múltiples interfaces de usuario disponibles en varias plataformas. Esta aplicación permitirá a los usuarios realizar un seguimiento fácil de su progreso, saber qué ejercicio hacer según sus necesidades y cómo realizarlo correctamente, además de obtener inspiración.
+El software te permite crear un servidor que gestiona datos de usuario para una aplicación de entrenamiento. Permite la sincronización de entrenamientos a través de múltiples interfaces de usuario disponibles en varias plataformas. Esta aplicación permitirá a los usuarios realizar un seguimiento fácil de su progreso, saber qué ejercicio hacer según sus necesidades y cómo realizarlo correctamente, y obtener inspiración.
 
-## El planteamiento del problema y los objetivos (marco)
+## El planteamiento del problema y los objetivos (marco de trabajo)
 
-Esta aplicación resuelve el problema de sincronizar entrenamientos en múltiples plataformas en una interfaz de usuario diseñada para el entrenamiento.
+Esta aplicación resuelve el problema de sincronizar entrenamientos a través de múltiples plataformas en una interfaz de usuario diseñada para entrenamiento.
 
-El objetivo es crear una aplicación autohospedada y de código abierto que sea simple, documentada y exclusivamente para entrenamientos.
+El objetivo es crear una aplicación autoalojada y de código abierto que sea simple, documentada y exclusivamente para entrenamientos.
 
-## Una visión general de las funcionalidades de la aplicación
+## Una descripción general de las características de la aplicación
 
 - Crear entrenamientos personalizados (el usuario podrá seleccionar ejercicios y luego crear entrenamientos que son listas de ejercicios)
 - Seguimiento del progreso (el usuario ingresará el número de repeticiones/tiempo, series y peso).
@@ -44,7 +44,7 @@ Usuarios que deseen alojar la aplicación.
 
 ## Restricciones de la aplicación
 
-- Backend: Next.js
+- Backend: Nestjs
 - Frontend: Angular
 
 ## Casos de uso
@@ -71,9 +71,9 @@ Usuarios que deseen alojar la aplicación.
 |---|---|
 |  Actores | Usuario |
 
-#### Modificar progreso del usuario para un ejercicio:
+#### Modificar el progreso del usuario para un ejercicio:
 
-| Descripción  | Modificar progreso del usuario vinculado al usuario, especificando peso, duración, etc. |
+| Descripción  | Modificar el progreso del usuario vinculado al usuario, especificando peso, duración, etc. |
 |---|---|
 |  Actores | Usuario |
 
@@ -91,7 +91,7 @@ Usuarios que deseen alojar la aplicación.
 
 ## Planificación a través de la metodología de desarrollo
 
-La planificación se llevará a cabo semanalmente durante el período del curso, asegurando que se cumplan los objetivos. Además, la metodología de desarrollo será iterativa, lo que permitirá reorganizar el proyecto en caso de problemas.
+La planificación se llevará a cabo semanalmente durante el período del curso, asegurando que se cumplan los objetivos. Además, la metodología de desarrollo será iterativa, lo que permitirá la reorganización del proyecto en caso de problemas.
 El proyecto se dividirá en tres trimestres:
 - Desarrollo inicial de la API
 - Frontend

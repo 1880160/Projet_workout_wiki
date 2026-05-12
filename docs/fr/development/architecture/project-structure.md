@@ -1,4 +1,4 @@
-# Structure du projet
+# Structure du Projet
 
 ## Frontend
 
@@ -6,7 +6,7 @@
 
 ## Backend
 
-### Structure globale du système backend
+### Structure globale du système Backend
 
 ![alt text](./../../../Diagrams/ImageRenditions/system-diagram-backend.png)
 

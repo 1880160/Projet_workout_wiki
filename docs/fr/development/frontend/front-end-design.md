@@ -1,4 +1,4 @@
-# Designs FrontEnd
+# Designs Front-End
 
 ## Page d'accueil :
 
@@ -20,7 +20,7 @@
 
 ![Création d'entraînement](./../../../Front-End-Designs-Images/WorkoutCreate.svg)
 
-3# Page d'exercice :
+# Page d'exercice :
 
 ![Exercice](./../../../Front-End-Designs-Images/Exercise.svg)
 
@@ -28,10 +28,20 @@
 
 ![Création d'exercice](./../../../Front-End-Designs-Images/ExerciseCreate.svg)
 
-## Page Mes exercices :
+# Révision des exercices (Administrateur uniquement)
 
-![Page Mes exercices](./../../../Front-End-Designs-Images/MyExercise.svg)
+## Vide
 
-## Page de création de mes exercices :
+![Révision des exercices Vide](../../../Front-End-Designs-Images/ExerciseReview.svg)
 
-![Page de création de mes exercices](./../../../Front-End-Designs-Images/MyExerciseCreate.svg)
+## un
+
+![Révision des exercices Un](../../../Front-End-Designs-Images/ExerciseReview1.svg)
+
+## Ma page d'exercices :
+
+![Ma page d'exercices](./../../../Front-End-Designs-Images/MyExercise.svg)
+
+## Ma page de création d'exercices :
+
+![Ma page de création d'exercices](./../../../Front-End-Designs-Images/MyExerciseCreate.svg)

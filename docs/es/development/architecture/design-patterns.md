@@ -10,9 +10,9 @@ NestJs utiliza singleton por defecto en su repositorio.
 
 ## Decorator
 
-Se utilizará Decorator para inyectar código dentro de funciones y rutas
-para reducir considerablemente la cantidad de código y aumentar la legibilidad del código.
+Decorator se utilizará para inyectar código dentro de funciones y rutas
+para reducir significativamente la cantidad de código y aumentar la legibilidad del código.
 
 ## Observer
 
-El servidor utilizará SSE (Server Side Events) para notificar al cliente sobre notificaciones en tiempo real, como alertas de entrenamiento y solicitudes de revisión de ejercicios.
+El servidor utilizará SSE (Server Side Events) para notificar al cliente de notificaciones en tiempo real como alertas de entrenamiento y solicitudes de revisión de ejercicios.

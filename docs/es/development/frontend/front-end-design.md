@@ -20,13 +20,23 @@
 
 ![Creación de entrenamiento](./../../../Front-End-Designs-Images/WorkoutCreate.svg)
 
-3# Página de ejercicio:
+# Página de ejercicio:
 
 ![Ejercicio](./../../../Front-End-Designs-Images/Exercise.svg)
 
 ## Página de creación de ejercicio:
 
 ![Creación de ejercicio](./../../../Front-End-Designs-Images/ExerciseCreate.svg)
+
+# Revisión de ejercicios (Solo administradores)
+
+## Vacío
+
+![Revisión de ejercicios vacía](../../../Front-End-Designs-Images/ExerciseReview.svg)
+
+## uno
+
+![Revisión de ejercicios uno](../../../Front-End-Designs-Images/ExerciseReview1.svg)
 
 ## Página de mis ejercicios:
 

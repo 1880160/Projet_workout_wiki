@@ -1,5 +1,5 @@
 {
-  "version": "1.13",
+  "version": "1.15",
   "locale": {
     "source": "en",
     "targets": [
@@ -13,8 +13,10 @@
         "[locale]/*.md",
         "[locale]/development/*.md",
         "[locale]/development/backend/*.md",
+        "[locale]/development/backend/usefull-vscode-tools/*.md",
         "[locale]/development/architecture/*.md",
-        "[locale]/development/frontend/*.md"
+        "[locale]/development/frontend/*.md",
+        "[locale]/development/future-plans/*.md"
       ]
     }
     

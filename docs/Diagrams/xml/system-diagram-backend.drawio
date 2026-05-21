@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="2">
     <diagram name="diagramme de classe" id="f1yAM5DfKGLaTx1Gfc8v">
-        <mxGraphModel dx="2528" dy="2785" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
+        <mxGraphModel dx="2158" dy="2581" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#FFFFFF" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -134,7 +134,7 @@
                     <mxGeometry y="30" width="200" height="170" as="geometry"/>
                 </mxCell>
                 <mxCell id="DawH9yrtN17S0lsIlcgT-18" value="" style="swimlane;startSize=0;" parent="1" vertex="1">
-                    <mxGeometry x="-805" y="-2020" width="810" height="1070" as="geometry"/>
+                    <mxGeometry x="-810" y="-2020" width="810" height="1070" as="geometry"/>
                 </mxCell>
                 <mxCell id="54ykkY1KujX23bqlJ3_W-23" value="&lt;div&gt;number workoutId&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;User user&lt;/div&gt;&lt;div&gt;string workoutName&lt;/div&gt;&lt;div&gt;Date weeklyDate&lt;/div&gt;&lt;div&gt;Date AlertAt (weeklyDate - 5m,15m, 1/2h or null)&lt;/div&gt;&lt;div&gt;List&amp;lt;UserExercise&amp;gt; userProgress&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" parent="DawH9yrtN17S0lsIlcgT-18" vertex="1">
                     <mxGeometry x="570" y="170" width="200" height="110" as="geometry"/>
@@ -171,19 +171,25 @@
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="100" value="Notification" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="DawH9yrtN17S0lsIlcgT-18" vertex="1">
-                    <mxGeometry x="330" y="910" width="140" height="150" as="geometry"/>
+                    <mxGeometry x="330" y="840" width="140" height="210" as="geometry"/>
                 </mxCell>
                 <mxCell id="101" value="number notificationId" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="100" vertex="1">
                     <mxGeometry y="30" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="102" value="bool isImportant" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="100" vertex="1">
+                <mxCell id="103" value="User user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="100" vertex="1">
                     <mxGeometry y="60" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="103" value="User user" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="100" vertex="1">
+                <mxCell id="102" value="string title" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="100" vertex="1">
                     <mxGeometry y="90" width="140" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="105" value="string context" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="100" vertex="1">
+                <mxCell id="105" value="string message" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="100" vertex="1">
                     <mxGeometry y="120" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" value="string context" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="100">
+                    <mxGeometry y="150" width="140" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="146" value="Date notificationDate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="100">
+                    <mxGeometry y="180" width="140" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="Entity/Database" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
                     <mxGeometry x="-525" y="-2042" width="110" height="30" as="geometry"/>
@@ -251,69 +257,81 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="62" style="edgeStyle=none;html=1;" parent="1" source="56" target="72" edge="1">
+                <mxCell id="62" style="edgeStyle=none;html=1;entryX=0.511;entryY=1.072;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="56" target="137" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="-640" y="-640" as="targetPoint"/>
+                        <mxPoint x="-670" y="-710" as="targetPoint"/>
                     </mxGeometry>
                 </mxCell>
                 <mxCell id="56" value="Notification.module" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-760" y="-640" width="200" height="200" as="geometry"/>
+                    <mxGeometry x="-750" y="-400" width="200" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="72" value="Notification.controller" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-760" y="-880" width="201" height="90" as="geometry"/>
+                <mxCell id="72" value="Notification.controller" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="-760" y="-930" width="201" height="330" as="geometry"/>
                 </mxCell>
-                <mxCell id="74" value="NotificationEndPoint()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="72" vertex="1">
+                <mxCell id="74" value="&lt;p&gt;&lt;b&gt;Post:&lt;/b&gt;&lt;/p&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="72" vertex="1">
                     <mxGeometry y="30" width="201" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="92" value="FindAllOfUser()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="72" vertex="1">
+                <mxCell id="92" value="/create-notification" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="72" vertex="1">
                     <mxGeometry y="60" width="201" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="96" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="80" target="87" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="128" value="&lt;p&gt;&lt;b&gt;Get:&lt;/b&gt;&lt;/p&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;" vertex="1" parent="72">
+                    <mxGeometry y="90" width="201" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="/" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="72">
+                    <mxGeometry y="120" width="201" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="/:id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="72">
+                    <mxGeometry y="150" width="201" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="/my-notification/:id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="72">
+                    <mxGeometry y="180" width="201" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="&lt;b&gt;Patch:&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="72">
+                    <mxGeometry y="210" width="201" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="/update-notification/:id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="72">
+                    <mxGeometry y="240" width="201" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="&lt;b&gt;Delete:&lt;/b&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="72">
+                    <mxGeometry y="270" width="201" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="/delete-notification/:id" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="72">
+                    <mxGeometry y="300" width="201" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="80" target="115" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-400" y="-680" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="106" style="edgeStyle=none;html=1;" parent="1" source="80" target="100" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
                 <mxCell id="80" value="Notification.Service" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-474.5" y="-870" width="139" height="120" as="geometry"/>
+                    <mxGeometry x="-474.5" y="-870" width="139" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="81" value="Create(Notification)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="80" vertex="1">
+                <mxCell id="81" value="CreateNotification(dto)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="80" vertex="1">
                     <mxGeometry y="30" width="139" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="82" value="FindAllByUserId(userId)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="80" vertex="1">
+                <mxCell id="82" value="FindAll" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="80" vertex="1">
                     <mxGeometry y="60" width="139" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="83" value="Delete(NotificationId)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="80" vertex="1">
+                <mxCell id="142" value="FindAllUser(userId)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="80">
                     <mxGeometry y="90" width="139" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="87" value="NotificationPulse.service" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-470" y="-680" width="140" height="60" as="geometry"/>
+                <mxCell id="143" value="FindOne(userId)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="80">
+                    <mxGeometry y="120" width="139" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="88" value="PulseNotification()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="87" vertex="1">
-                    <mxGeometry y="30" width="140" height="30" as="geometry"/>
+                <mxCell id="144" value="UpdateNotification(id, dto)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="80">
+                    <mxGeometry y="150" width="139" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="RemoveNotification(id)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="80" vertex="1">
+                    <mxGeometry y="180" width="139" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="95" style="edgeStyle=none;html=1;" parent="1" source="92" target="80" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="97" style="edgeStyle=none;html=1;" parent="1" source="113" target="72" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="-615" y="-800" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="112" value="" style="edgeStyle=none;html=1;" parent="1" source="87" target="113" edge="1">
-                    <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="-442" y="-680" as="sourcePoint"/>
-                        <mxPoint x="-596" y="-790" as="targetPoint"/>
-                    </mxGeometry>
-                </mxCell>
-                <mxCell id="113" value="possibility to use a Interceptor to filter outgoing request info based on user? which has new notificationÉ" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-610" y="-780" width="120" height="80" as="geometry"/>
-                </mxCell>
-                <mxCell id="114" value="Pulse Notification only sends a message to a frontend to request an update of the notifications in the browser" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-320" y="-720" width="120" height="130" as="geometry"/>
-                </mxCell>
                 <mxCell id="115" value="WorkoutNotificationChecker.service" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-                    <mxGeometry x="-510" y="-550" width="240" height="60" as="geometry"/>
+                    <mxGeometry x="-490" y="-610" width="240" height="60" as="geometry"/>
                 </mxCell>
                 <mxCell id="117" value="CheckForIncomingWorkoutAlert()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" parent="115" vertex="1">
                     <mxGeometry y="30" width="240" height="30" as="geometry"/>
@@ -331,16 +349,16 @@
                         </Array>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="125" style="edgeStyle=none;html=1;" edge="1" parent="1" source="124" target="31">
+                <mxCell id="125" style="edgeStyle=none;html=1;" parent="1" source="124" target="31" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="124" value="&lt;div&gt;user-exercise.module&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="124" value="&lt;div&gt;user-exercise.module&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="850" y="-1680" width="200" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="126" value="&lt;div&gt;exercise-request.module&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="126" value="&lt;div&gt;exercise-request.module&lt;/div&gt;" style="swimlane;whiteSpace=wrap;html=1;" parent="1" vertex="1">
                     <mxGeometry x="800" y="-760" width="200" height="200" as="geometry"/>
                 </mxCell>
-                <mxCell id="127" style="edgeStyle=none;html=1;" edge="1" parent="1" source="126" target="120">
+                <mxCell id="127" style="edgeStyle=none;html=1;" parent="1" source="126" target="120" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
             </root>

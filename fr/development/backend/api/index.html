@@ -1,0 +1,4706 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/api/">
+      
+      
+        <link rel="prev" href="../../architecture/project-structure/">
+      
+      
+        <link rel="next" href="../backend-technologies/">
+      
+      
+        
+          <link rel="alternate" href="../../../../development/backend/api/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="fr">
+        
+          <link rel="alternate" href="../../../../es/development/backend/api/" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Api - Workout Project</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../stylesheets/mkdocsoad.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modules" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../" title="Workout Project" class="md-header__button md-logo" aria-label="Workout Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Workout Project
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Api
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Sélectionner la langue">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../../development/backend/api/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="fr" class="md-select__link">
+              Français
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../es/development/backend/api/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Workout Project" class="md-nav__button md-logo" aria-label="Workout Project" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Workout Project
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bienvenue !
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Démarrage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Development
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Development
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../project-overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aperçu du projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Architecture
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/design-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modèles de conception utilisés dans le projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/project-structure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Structure du Projet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Backend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Api
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modules :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routes :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project_workout-example-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project_Workout example 1.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project_Workout example 1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        App
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-userssign-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /users/sign-in
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersrefresh-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/refresh-login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersmy-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/my-info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-userssign-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /users/sign-up
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-usersid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /users/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-usersid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /users/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-exercisescreate-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /exercises/create-exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercisesid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-exercisesupdate-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /exercises/update-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-exercisesdelete-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /exercises/delete-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercisesrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExercisesRequest
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExercisesRequest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-exercises-requestcreate-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /exercises-request/create-exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercises-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises-request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercises-requestcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises-request/count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercises-requestid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises-request/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-exercises-requestupdate-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /exercises-request/update-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-exercises-requestdelete-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /exercises-request/delete-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-exercises-requestapprove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /exercises-request/approve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-notificationsse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification/sse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-notificationcreate-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /notification/create-notification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-notificationmy-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification/my-notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-notificationid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-notificationmy-notificationid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification/my-notification/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-notificationupdate-notificationid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /notification/update-notification/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-notificationdelete-notificationid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /notification/delete-notification/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userexercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserExercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UserExercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-user-exercisescreate-user-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /user-exercises/create-user-exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /user-exercises
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-exercisesmy-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /user-exercises/my-exercises
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-exercisesmy-exercises-by-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /user-exercises/my-exercises-by-ids
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-exercisesid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /user-exercises/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-user-exercisesupdate-user-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /user-exercises/update-user-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-user-exercisesdelete-user-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /user-exercises/delete-user-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workout
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-workoutcreate-workout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /workout/create-workout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-workout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /workout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-workoutmy-workouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /workout/my-workouts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-workoutid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /workout/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-workoutmy-workoutsid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /workout/my-workouts/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-workoutupdate-workoutid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /workout/update-workout/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-workoutdelete-workoutid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /workout/delete-workout/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schemas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createexercisedto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateExerciseDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createnotificationdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateNotificationDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createuserdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateUserDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createuserexercisedto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateUserExerciseDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createworkoutdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateWorkoutDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signinuserdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SignInUserDTO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateexercisedto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UpdateExerciseDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateuserdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UpdateUserDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateuserexercisedto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UpdateUserExerciseDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateworkoutdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UpdateWorkoutDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security schemes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../backend-technologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technologies backend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usefull vscode tools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Usefull vscode tools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usefull-vscode-tools/vscode/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    outils vscode que j'utilise
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Frontend
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frontend/front-end-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Designs Front-End
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../frontend/frontend-technologies/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technologies frontend
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Future plans
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Future plans
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../future-plans/features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fonctionnalités
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modules :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#routes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routes :
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project_workout-example-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Project_Workout example 1.0
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Project_Workout example 1.0">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        App
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="App">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-userssign-in" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /users/sign-in
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersrefresh-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/refresh-login
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersmy-info" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/my-info
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-userssign-up" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /users/sign-up
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-usersid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /users/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-usersid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /users/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-usersid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /users/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-exercisescreate-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /exercises/create-exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercisesid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-exercisesupdate-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /exercises/update-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-exercisesdelete-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /exercises/delete-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercisesrequest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExercisesRequest
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ExercisesRequest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-exercises-requestcreate-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /exercises-request/create-exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercises-request" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises-request
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercises-requestcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises-request/count
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-exercises-requestid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /exercises-request/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-exercises-requestupdate-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /exercises-request/update-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-exercises-requestdelete-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /exercises-request/delete-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-exercises-requestapprove" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /exercises-request/approve
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notification
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Notification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-notificationsse" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification/sse
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#post-notificationcreate-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /notification/create-notification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-notificationmy-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification/my-notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-notificationid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-notificationmy-notificationid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /notification/my-notification/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-notificationupdate-notificationid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /notification/update-notification/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-notificationdelete-notificationid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /notification/delete-notification/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userexercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserExercises
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UserExercises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-user-exercisescreate-user-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /user-exercises/create-user-exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /user-exercises
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-exercisesmy-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /user-exercises/my-exercises
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-exercisesmy-exercises-by-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /user-exercises/my-exercises-by-ids
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-user-exercisesid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /user-exercises/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-user-exercisesupdate-user-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /user-exercises/update-user-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-user-exercisesdelete-user-exerciseid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /user-exercises/delete-user-exercise/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#workout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workout
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Workout">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#post-workoutcreate-workout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        POST /workout/create-workout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-workout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /workout
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-workoutmy-workouts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /workout/my-workouts
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-workoutid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /workout/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-workoutmy-workoutsid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GET /workout/my-workouts/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patch-workoutupdate-workoutid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PATCH /workout/update-workout/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-workoutdelete-workoutid" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DELETE /workout/delete-workout/{id}
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schemas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Schemas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#createexercisedto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateExerciseDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createnotificationdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateNotificationDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createuserdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateUserDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createuserexercisedto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateUserExerciseDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#createworkoutdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CreateWorkoutDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signinuserdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SignInUserDTO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateexercisedto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UpdateExerciseDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateuserdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UpdateUserDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateuserexercisedto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UpdateUserExerciseDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updateworkoutdto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UpdateWorkoutDto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security schemes
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h2 id="modules">Modules :</h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Contrôleur</th>
+<th>Service(s)</th>
+<th>Référentiel/ ORM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>exercise.module</td>
+<td>exercise.Controller</td>
+<td>exercise.service</td>
+<td>Exercise</td>
+</tr>
+<tr>
+<td>exercise-request.module</td>
+<td>exercise-request.Controller</td>
+<td>exercise-request.service</td>
+<td>ExerciseRequest</td>
+</tr>
+<tr>
+<td>user-exercise.module</td>
+<td>user-exercise.Controller</td>
+<td>user-exercise.service</td>
+<td>UserExercise</td>
+</tr>
+<tr>
+<td>workout.module</td>
+<td>workout.Controller</td>
+<td>workout.service</td>
+<td>Workout</td>
+</tr>
+<tr>
+<td>user.module</td>
+<td>user.Controller</td>
+<td>user.service</td>
+<td>User</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="routes">Routes :</h2>
+<!--
+This Markdown has been generated by essentials-openapi
+https://github.com/Neoteroi/essentials-openapi
+
+Most likely, it is not desirable to edit this file by hand!
+-->
+
+<h1 id="project_workout-example-10">Project_Workout example <span class="api-version">1.0</span></h1>
+<p>The Project_Workout API description</p>
+<hr />
+<h2 id="app"><span class="api-tag">App</span></h2>
+<hr class="operation-separator" />
+
+<h3 id="get"><span class="http-get">GET</span> /</h3>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="users"><span class="api-tag">Users</span></h2>
+<hr class="operation-separator" />
+
+<h3 id="post-userssign-in"><span class="http-post">POST</span> /users/sign-in</h3>
+<p>Sign into a route</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Very12Secure&amp;^Password^&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;example&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;example&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Very12Secure&amp;^Password^&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;password&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="3:1"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">201 Created</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-usersrefresh-login"><span class="http-get">GET</span> /users/refresh-login</h3>
+<p>Sign up / creates an account<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-usersmy-info"><span class="http-get">GET</span> /users/my-info</h3>
+<p>Gets the current logged in user<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-users"><span class="http-get">GET</span> /users</h3>
+<p>Gets all the users<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:1"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="post-userssign-up"><span class="http-post">POST</span> /users/sign-up</h3>
+<p>Sign-up / creates an account</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="7:1"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@workout.com&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Very12Secure&amp;^Password^&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;example&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;example&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@workout.com&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;example&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Very12Secure&amp;^Password^&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;username&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;password&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="8:1"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">201 Created</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-usersid"><span class="http-get">GET</span> /users/<span class="route-param">{id}</span></h3>
+<p>Gets the user with the specified id</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>number</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="9:1"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="patch-usersid"><span class="http-patch">PATCH</span> /users/<span class="route-param">{id}</span></h3>
+<p>Updates the user</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="10:1"><input checked="checked" id="__tabbed_10_1" name="__tabbed_10" type="radio" /><div class="tabbed-labels"><label for="__tabbed_10_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@workout.com&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Very12Secure&amp;^Password^&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;userType&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/components/schemas/UpdateUserDto&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="11:1"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="delete-usersid"><span class="http-delete">DELETE</span> /users/<span class="route-param">{id}</span></h3>
+<p>Removes an user</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="12:1"><input checked="checked" id="__tabbed_12_1" name="__tabbed_12" type="radio" /><div class="tabbed-labels"><label for="__tabbed_12_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="exercises"><span class="api-tag">Exercises</span></h2>
+<hr class="operation-separator" />
+
+<h3 id="post-exercisescreate-exercise"><span class="http-post">POST</span> /exercises/create-exercise</h3>
+<p>Creates an exercise in the public database</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="13:1"><input checked="checked" id="__tabbed_13_1" name="__tabbed_13" type="radio" /><div class="tabbed-labels"><label for="__tabbed_13_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;force&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;beginner&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mechanic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;isolation&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;equipment&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;primaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;secondaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;instructions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;powerlifting&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;force&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;pull&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;push&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;beginner&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;intermediate&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;expert&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;mechanic&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;isolation&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;compound&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="kc">null</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;equipment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;medicine ball&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;dumbbell&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;body only&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;bands&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;kettlebells&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;foam roll&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;cable&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;machine&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;barbell&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;exercise ball&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;e-z curl bar&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;other&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;primaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;abductors&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;adductors&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;biceps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;calves&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;chest&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;forearms&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;glutes&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;hamstrings&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;lats&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;lower back&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;middle back&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;neck&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;quadriceps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;shoulders&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;traps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;triceps&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;secondaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;abductors&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;adductors&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;biceps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;calves&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;chest&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;forearms&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;glutes&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;hamstrings&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;lats&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;lower back&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;middle back&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;neck&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;quadriceps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;shoulders&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;traps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;triceps&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;instructions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;powerlifting&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;strength&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;stretching&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;cardio&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;olympic weightlifting&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;strongman&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;plyometrics&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;force&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;level&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;mechanic&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;equipment&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;primaryMuscles&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;secondaryMuscles&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;instructions&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;category&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="14:1"><input checked="checked" id="__tabbed_14_1" name="__tabbed_14" type="radio" /><div class="tabbed-labels"><label for="__tabbed_14_1">201 Created</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-exercises"><span class="http-get">GET</span> /exercises</h3>
+<p>Gets all exercises, filtering by name and muscles groups</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>category</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="parameter-name"><code>muscle_group</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="parameter-name"><code>name</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="15:1"><input checked="checked" id="__tabbed_15_1" name="__tabbed_15" type="radio" /><div class="tabbed-labels"><label for="__tabbed_15_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-exercisesid"><span class="http-get">GET</span> /exercises/<span class="route-param">{id}</span></h3>
+<p>Gets an exercise by id</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="16:1"><input checked="checked" id="__tabbed_16_1" name="__tabbed_16" type="radio" /><div class="tabbed-labels"><label for="__tabbed_16_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="patch-exercisesupdate-exerciseid"><span class="http-patch">PATCH</span> /exercises/update-exercise/<span class="route-param">{id}</span></h3>
+<p>Updates a exercise in the public database</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="17:1"><input checked="checked" id="__tabbed_17_1" name="__tabbed_17" type="radio" /><div class="tabbed-labels"><label for="__tabbed_17_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;force&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;beginner&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;mechanic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;isolation&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;equipment&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;primaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;secondaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;instructions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;string&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;powerlifting&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/components/schemas/UpdateExerciseDto&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="18:1"><input checked="checked" id="__tabbed_18_1" name="__tabbed_18" type="radio" /><div class="tabbed-labels"><label for="__tabbed_18_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="delete-exercisesdelete-exerciseid"><span class="http-delete">DELETE</span> /exercises/delete-exercise/<span class="route-param">{id}</span></h3>
+<p>Deletes a exercise in the public database</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="19:1"><input checked="checked" id="__tabbed_19_1" name="__tabbed_19" type="radio" /><div class="tabbed-labels"><label for="__tabbed_19_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="exercisesrequest"><span class="api-tag">ExercisesRequest</span></h2>
+<hr class="operation-separator" />
+
+<h3 id="post-exercises-requestcreate-exercise"><span class="http-post">POST</span> /exercises-request/create-exercise</h3>
+<p>Creates an exercise request for the public database</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="20:1"><input checked="checked" id="__tabbed_20_1" name="__tabbed_20" type="radio" /><div class="tabbed-labels"><label for="__tabbed_20_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;force&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;beginner&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;mechanic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;isolation&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;equipment&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;primaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;secondaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;instructions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">],</span>
+<span class="w">    </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;powerlifting&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;force&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;pull&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;push&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;beginner&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;intermediate&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;expert&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;mechanic&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;isolation&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;compound&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="kc">null</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;equipment&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;medicine ball&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;dumbbell&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;body only&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;bands&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;kettlebells&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;foam roll&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;cable&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;machine&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;barbell&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;exercise ball&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;e-z curl bar&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;other&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;primaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;abductors&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;adductors&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;biceps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;calves&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;chest&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;forearms&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;glutes&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;hamstrings&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;lats&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;lower back&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;middle back&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;neck&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;quadriceps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;shoulders&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;traps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;triceps&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;secondaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;abductors&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;adductors&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;biceps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;calves&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;chest&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;forearms&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;glutes&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;hamstrings&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;lats&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;lower back&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;middle back&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;neck&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;quadriceps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;shoulders&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;traps&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;triceps&quot;</span>
+<span class="w">            </span><span class="p">],</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;instructions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;examples&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">                </span><span class="s2">&quot;powerlifting&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;strength&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;stretching&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;cardio&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;olympic weightlifting&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;strongman&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s2">&quot;plyometrics&quot;</span>
+<span class="w">            </span><span class="p">]</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;force&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;level&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;mechanic&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;equipment&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;primaryMuscles&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;secondaryMuscles&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;instructions&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;category&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="21:1"><input checked="checked" id="__tabbed_21_1" name="__tabbed_21" type="radio" /><div class="tabbed-labels"><label for="__tabbed_21_1">201 Created</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-exercises-request"><span class="http-get">GET</span> /exercises-request</h3>
+<p>Gets all exercise request, filtering by name and muscles groups</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>muscle_group</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="parameter-name"><code>name</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="parameter-name"><code>secondary_muscle_group</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="22:1"><input checked="checked" id="__tabbed_22_1" name="__tabbed_22" type="radio" /><div class="tabbed-labels"><label for="__tabbed_22_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-exercises-requestcount"><span class="http-get">GET</span> /exercises-request/count</h3>
+<p>Gets the number of exercise request<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="23:1"><input checked="checked" id="__tabbed_23_1" name="__tabbed_23" type="radio" /><div class="tabbed-labels"><label for="__tabbed_23_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-exercises-requestid"><span class="http-get">GET</span> /exercises-request/<span class="route-param">{id}</span></h3>
+<p>Gets an exercise request by id</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="24:1"><input checked="checked" id="__tabbed_24_1" name="__tabbed_24" type="radio" /><div class="tabbed-labels"><label for="__tabbed_24_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="patch-exercises-requestupdate-exerciseid"><span class="http-patch">PATCH</span> /exercises-request/update-exercise/<span class="route-param">{id}</span></h3>
+<p>Updates an exercise request</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="25:1"><input checked="checked" id="__tabbed_25_1" name="__tabbed_25" type="radio" /><div class="tabbed-labels"><label for="__tabbed_25_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;force&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;static&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;beginner&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;mechanic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;isolation&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;equipment&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;primaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;secondaryMuscles&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;abdominals&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;instructions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;string&quot;</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="nt">&quot;category&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;powerlifting&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/components/schemas/UpdateExerciseDto&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="26:1"><input checked="checked" id="__tabbed_26_1" name="__tabbed_26" type="radio" /><div class="tabbed-labels"><label for="__tabbed_26_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="delete-exercises-requestdelete-exerciseid"><span class="http-delete">DELETE</span> /exercises-request/delete-exercise/<span class="route-param">{id}</span></h3>
+<p>Deletes an exercise request</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="27:1"><input checked="checked" id="__tabbed_27_1" name="__tabbed_27" type="radio" /><div class="tabbed-labels"><label for="__tabbed_27_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="post-exercises-requestapprove"><span class="http-post">POST</span> /exercises-request/approve</h3>
+<p>Approves an exercise, moving it to an actual exercise<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="28:1"><input checked="checked" id="__tabbed_28_1" name="__tabbed_28" type="radio" /><div class="tabbed-labels"><label for="__tabbed_28_1">201 Created</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="notification"><span class="api-tag">Notification</span></h2>
+<hr class="operation-separator" />
+
+<h3 id="get-notificationsse"><span class="http-get">GET</span> /notification/sse</h3>
+<p>Watches for changes in the user's notification<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="29:1"><input checked="checked" id="__tabbed_29_1" name="__tabbed_29" type="radio" /><div class="tabbed-labels"><label for="__tabbed_29_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="post-notificationcreate-notification"><span class="http-post">POST</span> /notification/create-notification</h3>
+<p>creates an new notification</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="30:1"><input checked="checked" id="__tabbed_30_1" name="__tabbed_30" type="radio" /><div class="tabbed-labels"><label for="__tabbed_30_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WORKOUT&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;userId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span>
+<span class="p">}</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Notification&#39;s title&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Notification&#39;s message&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;context&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Context of this notification&#39;s message&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;example&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WORKOUT&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;userId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user which this notification belongs to&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;title&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;message&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;context&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;userId&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="31:1"><input checked="checked" id="__tabbed_31_1" name="__tabbed_31" type="radio" /><div class="tabbed-labels"><label for="__tabbed_31_1">201 Created</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-notificationmy-notifications"><span class="http-get">GET</span> /notification/my-notifications</h3>
+<p>Gets all the notifications of the user<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="32:1"><input checked="checked" id="__tabbed_32_1" name="__tabbed_32" type="radio" /><div class="tabbed-labels"><label for="__tabbed_32_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-notification"><span class="http-get">GET</span> /notification</h3>
+<p>Gets all the notifications, used by admin<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="33:1"><input checked="checked" id="__tabbed_33_1" name="__tabbed_33" type="radio" /><div class="tabbed-labels"><label for="__tabbed_33_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-notificationid"><span class="http-get">GET</span> /notification/<span class="route-param">{id}</span></h3>
+<p>Gets the notification by id, only used by admin</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="34:1"><input checked="checked" id="__tabbed_34_1" name="__tabbed_34" type="radio" /><div class="tabbed-labels"><label for="__tabbed_34_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-notificationmy-notificationid"><span class="http-get">GET</span> /notification/my-notification/<span class="route-param">{id}</span></h3>
+<p>Gets all the user's notifications<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="35:1"><input checked="checked" id="__tabbed_35_1" name="__tabbed_35" type="radio" /><div class="tabbed-labels"><label for="__tabbed_35_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="patch-notificationupdate-notificationid"><span class="http-patch">PATCH</span> /notification/update-notification/<span class="route-param">{id}</span></h3>
+<p>Updates a notification with the corresponding id from the user's account</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="36:1"><input checked="checked" id="__tabbed_36_1" name="__tabbed_36" type="radio" /><div class="tabbed-labels"><label for="__tabbed_36_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="delete-notificationdelete-notificationid"><span class="http-delete">DELETE</span> /notification/delete-notification/<span class="route-param">{id}</span></h3>
+<p>Deletes a notification with the corresponding id from the user's account</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="37:1"><input checked="checked" id="__tabbed_37_1" name="__tabbed_37" type="radio" /><div class="tabbed-labels"><label for="__tabbed_37_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="userexercises"><span class="api-tag">UserExercises</span></h2>
+<hr class="operation-separator" />
+
+<h3 id="post-user-exercisescreate-user-exercise"><span class="http-post">POST</span> /user-exercises/create-user-exercise</h3>
+<p>Create a UserExercise on a user</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="38:1"><input checked="checked" id="__tabbed_38_1" name="__tabbed_38" type="radio" /><div class="tabbed-labels"><label for="__tabbed_38_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my-squat-for-strength-training&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;repetition&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;restTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;sets&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;executionTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;exerciseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span>
+<span class="p">}</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;example&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my-squat-for-strength-training&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The weight of the dumbell/olympic bar/other in the exercise &quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;repetition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The number of repetitions between sets&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;restTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The rest time between sets&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;sets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The number of times do to the exercise&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;executionTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The time of in which the user &#39;executes&#39; the exercise, 0 if it&#39;s an exercise which doesn&#39;t need a timed execution&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;exerciseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;number&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The exercise in which this UserExercise refers to&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;name&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;weight&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;repetition&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;restTime&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;sets&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;executionTime&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;exerciseId&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="39:1"><input checked="checked" id="__tabbed_39_1" name="__tabbed_39" type="radio" /><div class="tabbed-labels"><label for="__tabbed_39_1">201 Created</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-user-exercises"><span class="http-get">GET</span> /user-exercises</h3>
+<p>Gets all the UserExercise, Only used by admins</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>name</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="40:1"><input checked="checked" id="__tabbed_40_1" name="__tabbed_40" type="radio" /><div class="tabbed-labels"><label for="__tabbed_40_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-user-exercisesmy-exercises"><span class="http-get">GET</span> /user-exercises/my-exercises</h3>
+<p>Gets all UserExercise of a user, filtering by name if possible</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>category</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="parameter-name"><code>muscle_group</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="parameter-name"><code>name</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="41:1"><input checked="checked" id="__tabbed_41_1" name="__tabbed_41" type="radio" /><div class="tabbed-labels"><label for="__tabbed_41_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-user-exercisesmy-exercises-by-ids"><span class="http-get">GET</span> /user-exercises/my-exercises-by-ids</h3>
+<p>Gets multiple UserExercise of a user, by ids</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>ids</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="42:1"><input checked="checked" id="__tabbed_42_1" name="__tabbed_42" type="radio" /><div class="tabbed-labels"><label for="__tabbed_42_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-user-exercisesid"><span class="http-get">GET</span> /user-exercises/<span class="route-param">{id}</span></h3>
+<p>Gets an user's UserExercise by id<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="43:1"><input checked="checked" id="__tabbed_43_1" name="__tabbed_43" type="radio" /><div class="tabbed-labels"><label for="__tabbed_43_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="patch-user-exercisesupdate-user-exerciseid"><span class="http-patch">PATCH</span> /user-exercises/update-user-exercise/<span class="route-param">{id}</span></h3>
+<p>Updates a user's UserExercise</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="44:1"><input checked="checked" id="__tabbed_44_1" name="__tabbed_44" type="radio" /><div class="tabbed-labels"><label for="__tabbed_44_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;my-squat-for-strength-training&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weight&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;repetition&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;restTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;sets&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;executionTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;exerciseId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">10.12</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/components/schemas/UpdateUserExerciseDto&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="45:1"><input checked="checked" id="__tabbed_45_1" name="__tabbed_45" type="radio" /><div class="tabbed-labels"><label for="__tabbed_45_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="delete-user-exercisesdelete-user-exerciseid"><span class="http-delete">DELETE</span> /user-exercises/delete-user-exercise/<span class="route-param">{id}</span></h3>
+<p>Deletes a user's UserExercise<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="46:1"><input checked="checked" id="__tabbed_46_1" name="__tabbed_46" type="radio" /><div class="tabbed-labels"><label for="__tabbed_46_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<h2 id="workout"><span class="api-tag">Workout</span></h2>
+<hr class="operation-separator" />
+
+<h3 id="post-workoutcreate-workout"><span class="http-post">POST</span> /workout/create-workout</h3>
+<p>Creates a new workout to user's account</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="47:1"><input checked="checked" id="__tabbed_47_1" name="__tabbed_47" type="radio" /><div class="tabbed-labels"><label for="__tabbed_47_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;workoutName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Leg day&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;weekDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-04-13T15:42:05.901Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;alertDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-04-13T15:42:05.901Z&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;userExercisesId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;string&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;object&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;workoutName&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;example&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Leg day&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;weekDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date-time&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Day / of the workout&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;alertDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;date-time&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Time to alert for the next workout&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">&quot;userExercisesId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user Exercises to add to the workout&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;string&quot;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">},</span>
+<span class="w">    </span><span class="nt">&quot;required&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="s2">&quot;workoutName&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;weekDate&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;alertDate&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;userExercisesId&quot;</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="48:1"><input checked="checked" id="__tabbed_48_1" name="__tabbed_48" type="radio" /><div class="tabbed-labels"><label for="__tabbed_48_1">201 Created</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-workout"><span class="http-get">GET</span> /workout</h3>
+<p>Gets all the workout, only used by admin<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="49:1"><input checked="checked" id="__tabbed_49_1" name="__tabbed_49" type="radio" /><div class="tabbed-labels"><label for="__tabbed_49_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-workoutmy-workouts"><span class="http-get">GET</span> /workout/my-workouts</h3>
+<p>Get the user's workouts, filtering by name</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>name</code></td>
+            <td>query</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="50:1"><input checked="checked" id="__tabbed_50_1" name="__tabbed_50" type="radio" /><div class="tabbed-labels"><label for="__tabbed_50_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-workoutid"><span class="http-get">GET</span> /workout/<span class="route-param">{id}</span></h3>
+<p>Get the workout by id, only used by admin</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="51:1"><input checked="checked" id="__tabbed_51_1" name="__tabbed_51" type="radio" /><div class="tabbed-labels"><label for="__tabbed_51_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="get-workoutmy-workoutsid"><span class="http-get">GET</span> /workout/my-workouts/<span class="route-param">{id}</span></h3>
+<p>Get the user's workout by id<p class="responses-title"><strong>Responses</strong></p></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="52:1"><input checked="checked" id="__tabbed_52_1" name="__tabbed_52" type="radio" /><div class="tabbed-labels"><label for="__tabbed_52_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="patch-workoutupdate-workoutid"><span class="http-patch">PATCH</span> /workout/update-workout/<span class="route-param">{id}</span></h3>
+<p>Updates a workout with the corresponding id from the user's account</p>
+<p class="request-body-title"><strong>Request body</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="53:1"><input checked="checked" id="__tabbed_53_1" name="__tabbed_53" type="radio" /><div class="tabbed-labels"><label for="__tabbed_53_1">application/json</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;workoutName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Leg day&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;weekDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-04-13T15:42:05.901Z&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;alertDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2022-04-13T15:42:05.901Z&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;userExercisesId&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">            </span><span class="s2">&quot;string&quot;</span>
+<span class="w">        </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<span class="small-note">⚠️</span>&nbsp;<em class="small-note warning">This example has been generated automatically from the schema and it is not accurate. Refer to the schema for more information.</em></p>
+<details class="hint">
+<summary>Schema of the request body</summary>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;array&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;items&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;$ref&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#/components/schemas/UpdateWorkoutDto&quot;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</details>
+</div>
+</div>
+</div>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="54:1"><input checked="checked" id="__tabbed_54_1" name="__tabbed_54" type="radio" /><div class="tabbed-labels"><label for="__tabbed_54_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr class="operation-separator" />
+
+<h3 id="delete-workoutdelete-workoutid"><span class="http-delete">DELETE</span> /workout/delete-workout/<span class="route-param">{id}</span></h3>
+<p>Deletes a workout with the corresponding id from the user's account</p>
+<p><strong>Input parameters</strong></p>
+<table>
+    <thead>
+        <tr>
+            <th>Parameter</th>
+            <th>In</th>
+            <th>Type</th>
+            <th>Default</th>
+            <th>Nullable</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="parameter-name"><code>id</code></td>
+            <td>path</td>
+            <td>string</td>
+            <td></td>
+            <td>No</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<p class="responses-title"><strong>Responses</strong></p>
+
+<div class="tabbed-set tabbed-alternate" data-tabs="55:1"><input checked="checked" id="__tabbed_55_1" name="__tabbed_55" type="radio" /><div class="tabbed-labels"><label for="__tabbed_55_1">200 OK</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block"></div>
+</div>
+</div>
+<hr />
+<h2 id="schemas">Schemas</h2>
+<h3 id="createexercisedto">CreateExerciseDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>category</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>equipment</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>force</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>instructions</code></td>
+            <td>Array&lt;<span class="string-type">string</span>&gt;</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>level</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>mechanic</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>primaryMuscles</code></td>
+            <td>Array&lt;<span class="string-type">string</span>&gt;</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>secondaryMuscles</code></td>
+            <td>Array&lt;<span class="string-type">string</span>&gt;</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="createnotificationdto">CreateNotificationDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>context</code></td>
+            <td><span class="string-type">string</span></td>
+            <td>Context of this notification's message</td>
+        </tr>
+        <tr>
+            <td><code>message</code></td>
+            <td><span class="string-type">string</span></td>
+            <td>Notification's message</td>
+        </tr>
+        <tr>
+            <td><code>title</code></td>
+            <td><span class="string-type">string</span></td>
+            <td>Notification's title</td>
+        </tr>
+        <tr>
+            <td><code>userId</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>user which this notification belongs to</td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="createuserdto">CreateUserDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>email</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>password</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>username</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="createuserexercisedto">CreateUserExerciseDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>executionTime</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The time of in which the user 'executes' the exercise, 0 if it's an exercise which doesn't need a timed execution</td>
+        </tr>
+        <tr>
+            <td><code>exerciseId</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The exercise in which this UserExercise refers to</td>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>repetition</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The number of repetitions between sets</td>
+        </tr>
+        <tr>
+            <td><code>restTime</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The rest time between sets</td>
+        </tr>
+        <tr>
+            <td><code>sets</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The number of times do to the exercise</td>
+        </tr>
+        <tr>
+            <td><code>weight</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The weight of the dumbell/olympic bar/other in the exercise </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="createworkoutdto">CreateWorkoutDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>alertDate</code></td>
+            <td><span class="string-type">string</span>(<span class="date-time-format format">date-time</span>)</td>
+            <td>Time to alert for the next workout</td>
+        </tr>
+        <tr>
+            <td><code>userExercisesId</code></td>
+            <td>Array&lt;<span class="string-type">string</span>&gt;</td>
+            <td>user Exercises to add to the workout</td>
+        </tr>
+        <tr>
+            <td><code>weekDate</code></td>
+            <td><span class="string-type">string</span>(<span class="date-time-format format">date-time</span>)</td>
+            <td>Day / of the workout</td>
+        </tr>
+        <tr>
+            <td><code>workoutName</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="signinuserdto">SignInUserDTO</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>password</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>username</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="updateexercisedto">UpdateExerciseDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>category</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>equipment</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>force</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>instructions</code></td>
+            <td>Array&lt;<span class="string-type">string</span>&gt;</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>level</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>mechanic</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>primaryMuscles</code></td>
+            <td>Array&lt;<span class="string-type">string</span>&gt;</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>secondaryMuscles</code></td>
+            <td>Array&lt;<span class="string-type">string</span>&gt;</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="updateuserdto">UpdateUserDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>email</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>password</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>username</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>userType</code></td>
+            <td><span class="number-type">number</span></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="updateuserexercisedto">UpdateUserExerciseDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>executionTime</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The time of in which the user 'executes' the exercise, 0 if it's an exercise which doesn't need a timed execution</td>
+        </tr>
+        <tr>
+            <td><code>exerciseId</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The exercise in which this UserExercise refers to</td>
+        </tr>
+        <tr>
+            <td><code>name</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><code>repetition</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The number of repetitions between sets</td>
+        </tr>
+        <tr>
+            <td><code>restTime</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The rest time between sets</td>
+        </tr>
+        <tr>
+            <td><code>sets</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The number of times do to the exercise</td>
+        </tr>
+        <tr>
+            <td><code>weight</code></td>
+            <td><span class="number-type">number</span></td>
+            <td>The weight of the dumbell/olympic bar/other in the exercise </td>
+        </tr>
+    </tbody>
+</table>
+
+<h3 id="updateworkoutdto">UpdateWorkoutDto</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>alertDate</code></td>
+            <td><span class="string-type">string</span>(<span class="date-time-format format">date-time</span>)</td>
+            <td>Time to alert for the next workout</td>
+        </tr>
+        <tr>
+            <td><code>userExercisesId</code></td>
+            <td>Array&lt;<span class="string-type">string</span>&gt;</td>
+            <td>user Exercises to add to the workout</td>
+        </tr>
+        <tr>
+            <td><code>weekDate</code></td>
+            <td><span class="string-type">string</span>(<span class="date-time-format format">date-time</span>)</td>
+            <td>Day / of the workout</td>
+        </tr>
+        <tr>
+            <td><code>workoutName</code></td>
+            <td><span class="string-type">string</span></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 id="security-schemes">Security schemes</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Scheme</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>bearer</td>
+            <td>http</td>
+            <td>bearer</td>
+            <td></td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

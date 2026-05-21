@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/getting-started/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/project-overview/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/project-overview/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/project-overview/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/project-overview/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/architecture/design-patterns/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/architecture/design-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/architecture/design-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/architecture/design-patterns/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/architecture/project-structure/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/architecture/project-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/architecture/project-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/architecture/project-structure/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/backend/api/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/api/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/api/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/api/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/backend/backend-technologies/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/backend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/backend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/backend-technologies/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/backend/usefull-vscode-tools/vscode/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/usefull-vscode-tools/vscode/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/usefull-vscode-tools/vscode/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/usefull-vscode-tools/vscode/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/frontend/front-end-design/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/frontend/front-end-design/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/frontend/front-end-design/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/frontend/front-end-design/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/frontend/frontend-technologies/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/frontend/frontend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/frontend/frontend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/frontend/frontend-technologies/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/development/future-plans/features/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/future-plans/features/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/future-plans/features/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/future-plans/features/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/getting-started/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/project-overview/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/project-overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/project-overview/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/project-overview/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/architecture/design-patterns/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/architecture/design-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/architecture/design-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/architecture/design-patterns/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/architecture/project-structure/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/architecture/project-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/architecture/project-structure/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/architecture/project-structure/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/backend/api/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/api/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/api/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/backend/backend-technologies/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/backend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/backend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/backend-technologies/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/backend/usefull-vscode-tools/vscode/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/usefull-vscode-tools/vscode/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/usefull-vscode-tools/vscode/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/usefull-vscode-tools/vscode/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/frontend/front-end-design/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/frontend/front-end-design/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/frontend/front-end-design/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/frontend/front-end-design/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/frontend/frontend-technologies/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/frontend/frontend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/frontend/frontend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/frontend/frontend-technologies/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/fr/development/future-plans/features/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/future-plans/features/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/future-plans/features/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/future-plans/features/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/getting-started/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/project-overview/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/project-overview/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/project-overview/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/project-overview/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/architecture/design-patterns/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/architecture/design-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/architecture/design-patterns/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/architecture/design-patterns/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/architecture/project-structure/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/architecture/project-structure/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/architecture/project-structure/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/architecture/project-structure/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/backend/api/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/api/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/api/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/api/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/backend/backend-technologies/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/backend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/backend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/backend-technologies/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/backend/usefull-vscode-tools/vscode/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/backend/usefull-vscode-tools/vscode/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/backend/usefull-vscode-tools/vscode/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/backend/usefull-vscode-tools/vscode/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/frontend/front-end-design/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/frontend/front-end-design/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/frontend/front-end-design/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/frontend/front-end-design/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/frontend/frontend-technologies/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/frontend/frontend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/frontend/frontend-technologies/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/frontend/frontend-technologies/"/>
+    </url>
+    <url>
+        <loc>https://1880160.github.io/Projet_workout_wiki/es/development/future-plans/features/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://1880160.github.io/Projet_workout_wiki/es/development/future-plans/features/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://1880160.github.io/Projet_workout_wiki/development/future-plans/features/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://1880160.github.io/Projet_workout_wiki/fr/development/future-plans/features/"/>
+    </url>
+</urlset>

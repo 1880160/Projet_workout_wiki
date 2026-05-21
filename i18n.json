@@ -1,0 +1,25 @@
+{
+  "version": "1.15",
+  "locale": {
+    "source": "en",
+    "targets": [
+      "fr",
+      "es"
+    ]
+  },
+  "buckets": {
+    "markdown" : {
+      "include": [
+        "[locale]/*.md",
+        "[locale]/development/*.md",
+        "[locale]/development/backend/*.md",
+        "[locale]/development/backend/usefull-vscode-tools/*.md",
+        "[locale]/development/architecture/*.md",
+        "[locale]/development/frontend/*.md",
+        "[locale]/development/future-plans/*.md"
+      ]
+    }
+    
+  },
+  "$schema": "https://lingo.dev/schema/i18n.json"
+}
